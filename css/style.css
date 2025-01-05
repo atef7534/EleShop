@@ -1,0 +1,321 @@
+/* variables */
+:root {
+  /* nothing here */
+  --main-background: rgb(18, 139, 82);
+  --main-transparent-background: rgba(18, 139, 82, 0.06);
+}
+* {
+  padding: 0;
+  margin: 0;
+  --webkit-box-sizing: border-box;
+  --moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  direction: rtl;
+  text-align: right;
+  font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding: 30px 50px 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.banner {
+  text-align: center;
+  background-color: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.banner > img {
+  width: auto;
+  height: 300px;
+  width: 50%;
+}
+.icon {
+  margin-bottom: 20px;
+  color: #a8a8a8;
+  transition: 0.4s;
+}
+/* header */
+#header {
+  background-color: var(--main-background);
+}
+#header .header-i {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+#header > .header-i > div > h2 {
+  color: #FFF;
+  font-size: 35px;
+  font-weight: bold;
+}
+#header > .header-i > div:nth-child(2) {
+  flex: 0.5;
+}
+#header > .header-i > div:nth-child(2) > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+#header > .header-i > div:nth-child(2) > ul > li > a {
+  color: #FFF;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px 10px;
+  display: block;
+}
+#header > .header-i > div:last-child > div > button {
+  border: 1px solid #FFF;
+  padding: 5px;
+  color: #FFF;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#header > .header-i > div:last-child > div > button:hover {
+  background-color: #FFF;
+  color: var(--main-background);
+}
+
+/* landing */
+.landing {
+  text-align: center;
+  position: relative;
+}
+.landing .slideshow {
+  margin: auto;
+}
+.slides {
+  display: none;
+  
+}
+.slides img {
+  border-radius: 4px;
+  max-width: 100%;
+}
+.dots {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%)
+}
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: var(--main-background);
+}
+.left-slide,
+.right-slide {
+  position: absolute;
+  top: 37.5%;
+  padding: 20px;
+  cursor: pointer;
+  background-color: var(--main-background);
+  border-radius: 50%;
+  color: #FFF;
+  user-select: none;
+}
+.left-slide:hover,
+.right-slide:hover {
+  background-color: green;
+}
+.left-slide {
+  left: 0;
+}
+.right-slide {
+  right: 0;
+}
+/* fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* recommended */
+.recommend {
+  padding: 20px 50px 50px;
+  background-color: var(--main-transparent-background);
+}
+.recommend > .title {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--main-background);
+  padding-bottom: 20px;
+}
+.recommend > .recommend-products {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 10px;
+  text-align: center;
+  column-gap: 5px;
+}
+.recommend > .recommend-products > .product {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  max-width: 150px;
+  user-select: none;
+}
+.recommend > .recommend-products > .product > img {
+  width: 150px;
+}
+@media screen and (max-width: 1200px) {
+  .recommend > .recommend-products {
+    grid-template-columns: auto auto auto auto auto;
+  }
+}
+@media screen and (max-width: 992px) {
+  .recommend > .recommend-products {
+    grid-template-columns: auto auto auto auto;
+  }
+  .recommend > .recommend-products > .product > img {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .recommend > .recommend-products {
+    grid-template-columns: auto auto auto;
+  }
+  .recommend > .recommend-products > .product > img {
+    width: 100px;
+  }
+}
+.recommend > .recommend-products > .product .txt {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 20px;
+  white-space: pre-wrap;
+}
+
+/* offers */
+.offers {
+  background-color: beige;
+}
+.offers > .container > .title > h3 {
+  color: var(--main-background);
+  font-weight: bold;
+  font-size: 30px;
+}
+.offers > .container > .product-offers {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  text-align: center;
+  margin-top: 20px;
+}
+.offers > .container > .product-offers > .product {
+  position: relative;
+  user-select: none;
+}
+.offers > .container > .product-offers > .product > img {
+  width: 200px;
+  cursor: pointer;
+}
+.offers > .container > .product-offers > .product > .txt > .product-txt {
+  color: #717171;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+.offers > .container > .product-offers > .product > .txt > .price {
+  padding: 4px;
+}
+.offers > .container > .product-offers > .product > .txt > .price > .before {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  font-size: 14px;
+  color: #000;
+}
+.offers > .container > .product-offers > .product > .txt > .price > .after {
+  font-weight: bold;
+  font-size: 18px;
+}
+.offers > .container > .product-offers > .product > .offer {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  background-color: #FF0000;
+  border-radius: 50%;
+  color: #FFF;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+/* support */
+.support .title {
+  text-align: center;
+  padding: 40px;
+}
+.support .title h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--main-background);
+}
+.support > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.support > .container > div {
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.support > .container > div:hover > .txt,
+.support > .container > div:hover .icon {
+  color: var(--main-background) !important;
+}
+.support > .container > div > .txt {
+  font-size: 22px;
+  color: #a8a8a8;
+}
+.support > .container > div > .txt > h4 {
+  padding: 20px;
+  color: #333;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--main-background);
+}
+.footer p {
+  font-size: 30px;
+  color: #FFF;
+  font-weight: bold;
+}

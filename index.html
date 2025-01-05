@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElEshop</title>
+  <!-- google fonts [links] -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+
+  <!-- css [files] -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+  <!-- header -->
+  <div class="header" id="header">
+    <div class="header-i">
+      <div class="header-iil">
+        <h2 class="Logo">لوجو</h2>
+      </div>
+      <div class="header-iic">
+        <ul class="links">
+          <li><a href="">الصفحة الرئيسية</a></li>
+          <li><a href="">التواصل</a></li>
+          <li><a href="">عنا</a></li>
+          <li><a href="">المتجر</a></li>
+        </ul>
+      </div>
+      <div class="header-iir">
+        <div class="login">
+          <button>تسجيل الدخول</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- landing -->
+  <div id="landing" class="landing">
+    <div class="slideshow">
+      <div class="slides fade">
+        <img src="images/image001.avif">
+      </div>
+      <div class="slides fade">
+        <img src="images/image002.avif">
+      </div>
+      <div class="slides fade">
+        <img src="images/image003.avif">
+      </div>
+      <div class="left-slide" onclick="changeSlide(-1)">
+        <a class="prev">&#10094;</a>
+      </div>
+      <div class="right-slide" onclick="changeSlide(1)">
+        <a class="next">&#10095;</a>
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+
+  <!-- recommended -->
+  <div class="recommend" id="recommend">
+    <div class="title">
+      <h3 class="recommend-title">مقترحة لك</h3>
+    </div>
+    <div class="recommend-products" id="recommend-products">
+      <div class="product">
+        <img src="images/iphone001.avif">
+        <div class="txt">أيفون آبل 15 برو ماكس</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone002.avif">
+        <div class="txt">أيفون آبل 15</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone003.avif">
+        <div class="txt">أيفون آبل 15 أسود</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone004.avif">
+        <div class="txt">أيفون آبل 15 برو ماكس أزرق تيتانيوم</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop001.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop002.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop003.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone001.avif">
+        <div class="txt">أيفون آبل 15 برو ماكس</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone002.avif">
+        <div class="txt">أيفون آبل 15</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone003.avif">
+        <div class="txt">أيفون آبل 15 أسود</div>
+      </div>
+      <div class="product">
+        <img src="images/iphone004.avif">
+        <div class="txt">أيفون آبل 15 برو ماكس أزرق تيتانيوم</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop001.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop002.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+      <div class="product">
+        <img src="images/laptop003.avif">
+        <div class="txt">لابتوب</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="banner" id="banner">
+    <img src="images/banner005.jpg" alt="no-image">
+    <img src="images/banner006.jpg" alt="no-image">
+  </div>
+  <!-- offers -->
+  <div class="offers" id="offers">
+    <div class="container">
+      <div class="title">
+        <h3>العروض</h3>
+      </div>
+      <div class="product-offers">
+        <div class="product">
+          <img src="images/iphone003.avif" alt="error">
+          <div class="txt">
+            <p class="product-txt">أيفون 15 رمادي</p>
+            <p class="price">
+              <span class="before">EGP 49,500</span>
+              <span class="after">45,500</span>
+            </p>
+          </div>
+          <span class="offer">15%-</span>
+        </div>
+        <div class="product">
+          <img src="images/iphone001.avif" alt="error">
+          <div class="txt">
+            <p class="product-txt">أيفون 15 بيج غامق</p>
+            <p class="price">
+              <span class="before">EGP 49,500</span>
+              <span class="after">45,500</span>
+            </p>
+          </div>
+          <span class="offer">25%-</span>
+        </div>
+        <div class="product">
+          <img src="images/iphone002.avif" alt="error">
+          <div class="txt">
+            <p class="product-txt">أيفون 15 وردي</p>
+            <p class="price">
+              <span class="before">EGP 49,500</span>
+              <span class="after">45,500</span>
+            </p>
+          </div>
+          <span class="offer">35%-</span>
+        </div>
+        <div class="product">
+          <img src="images/iphone001.avif" alt="error">
+          <div class="txt">
+            <p class="product-txt">أيفون 15 بيج غامق</p>
+            <p class="price">
+              <span class="before">EGP 49,500</span>
+              <span class="after">45,500</span>
+            </p>
+          </div>
+          <span class="offer">25%-</span>
+        </div>
+        <div class="product">
+          <img src="images/iphone002.avif" alt="error">
+          <div class="txt">
+            <p class="product-txt">أيفون 15 وردي</p>
+            <p class="price">
+              <span class="before">EGP 49,500</span>
+              <span class="after">45,500</span>
+            </p>
+          </div>
+          <span class="offer">35%-</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- supper -->
+  <div class="support" id="support">
+    <div class="title">
+      <h2>دعمنا</h2> 
+    </div>
+    <div class="container">
+      <div class="lvl">
+        <div class="txt">
+          <div class="icon">
+            <i class="fa-solid fa-medal fa-4x"></i>
+          </div>
+          <h4>دعم العملاء</h4>
+          <p>اتصل بنا عبر الدردشة المباشرة ورسائل البريد الإلكتروني والمكالمات الهاتفية</p>
+        </div>
+      </div>
+      <div class="lvl">
+        <div class="txt">
+          <div class="icon">
+            <i class="fa-brands fa-product-hunt fa-4x"></i>
+          </div>
+          <h4>الضمان</h4>
+          <p>يتم توفير حماية سياسة الضمان المحلية</p>
+        </div>
+      </div>
+      <div class="lvl">
+        <div class="txt">
+          <div class="icon">
+            <i class="fa-solid fa-phone fa-4x"></i>
+          </div>
+          <h4>أدلة المستخدم</h4>
+          <p>ابحث عن دليل مستخدم منتج ElEshop واستكشفه</p>
+        </div>
+      </div>
+      <div class="lvl">
+        <div class="txt">
+          <div class="icon">
+            <i class="fa-solid fa-medal fa-4x"></i>
+          </div>
+          <h4>الأسئلة المتكررة</h4>
+          <p> ابحث عن المساعدة عن ElEshop لتسهيل تعاملك</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer" id="footer">
+    <p>هذا الموقع ما زال تحت الصيانة إن شاء الله ينتهي قريباً</p>
+  </div>
+  <!-- script [files] -->
+  <script src="js/main.js"></script>
+  <script src="js/all.min.js"></script>
+</body>
+</html>
